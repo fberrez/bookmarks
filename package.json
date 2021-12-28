@@ -7,7 +7,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint --cache ."
+    "lint": "npx eslint --cache .",
+    "dev": "npx nodemon --signal SIGTERM lib/index.js",
+    "debug": "npx nodemon --signal SIGTERM --inspect lib/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,10 +22,14 @@
   },
   "homepage": "https://github.com/fberrez/bookmarks#readme",
   "dependencies": {
-    "fastify": "^3.25.2"
+    "convict": "^6.2.1",
+    "fastify": "^3.25.2",
+    "mongoose": "^6.1.4",
+    "pino": "^7.6.1"
   },
   "devDependencies": {
     "eslint": "^8.5.0",
-    "eslint-config-xo": "^0.39.0"
+    "eslint-config-xo": "^0.39.0",
+    "nodemon": "^2.0.15"
   }
 }
