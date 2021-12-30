@@ -1,7 +1,7 @@
 {
   "name": "bookmarks",
   "version": "1.0.0",
-  "description": "a tiny project used to save flickr and vimeo urls",
+  "description": "This project is a basic API used to manage bookmarks for vimeo and flickr.",
   "main": "index.js",
   "type": "module",
   "private": true,
