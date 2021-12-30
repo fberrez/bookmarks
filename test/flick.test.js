@@ -1,4 +1,4 @@
-import Flickr from '../lib/bookmark/flickr/flickr';
+import Flickr from '../lib/bookmark/provider/flickr/flickr';
 
 test('url valid', async () => {
 	const isValid = await Flickr.isURLValid('http://www.flickr.com/photos/bees/2341623661/');
