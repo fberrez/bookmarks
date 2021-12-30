@@ -5,13 +5,18 @@
   "main": "index.js",
   "type": "module",
   "private": true,
+  "engines": {
+    "node": ">=16.13.0"
+  },
   "scripts": {
+    "start": "node lib/index.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest test/",
     "lint": "npx eslint --config .eslintrc.json --cache .",
     "lint:fix": "npx eslint --config .eslintrc.json --cache --fix .",
     "dev": "npx nodemon --signal SIGTERM lib/index.js",
     "debug": "npx nodemon --signal SIGTERM --inspect lib/index.js",
-    "doc": "npx apidoc -i lib/ -o doc/"
+    "doc": "npx apidoc -i lib/ -o doc/",
+    "doc:serve": "npx serve doc/"
   },
   "repository": {
     "type": "git",
@@ -37,6 +42,7 @@
     "eslint-config-xo": "^0.39.0",
     "eslint-plugin-jest": "^25.3.2",
     "jest": "^27.4.5",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "serve": "^13.0.2"
   }
 }
