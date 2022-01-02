@@ -66,7 +66,7 @@ $ docker-compose up -d mongo
 
 ## TODO
 
-- Implement a cache to save data get from providers (flickr, vimeo)
+- Implement a cache to save data obtained from providers (flickr, vimeo)
 - Implement other providers
 - Implement API authentication (with 2FA)
 - Add more tests
