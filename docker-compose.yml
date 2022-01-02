@@ -1,6 +1,18 @@
 version: '3.8'
 
 services:
+  bookmarks:
+    build: .
+    restart: always
+    ports:
+      - 3000:3000
+    environment:
+      NODE_ENV: development
+      ADDRESS: 0.0.0.0
+      PORT: 3000
+      MONGO_URI: mongodb://bookmarksUser:mysecret@mongo:27017/bookmarks
+    networks:
+      - bookmarks_network
 
   mongo:
     image: mongo
@@ -13,3 +25,8 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
       MONGO_INITDB_DATABASE: bookmarks
+    networks:
+      - bookmarks_network
+
+networks:
+  bookmarks_network: null

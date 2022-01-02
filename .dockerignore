@@ -1,0 +1,14 @@
+doc/
+test/
+
+.env
+.env.blank
+
+docker-compose.yml
+
+apidoc.json
+
+.eslintignore
+.eslintrc.json
+
+README.md

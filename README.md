@@ -29,13 +29,20 @@ MONGO_URI=mongodb://bookmarksUser:mysecret@localhost:27017/bookmarks
 $ npm i
 
 # Starts mongo database
-$ docker-compose up -d
+$ docker-compose up -d mongo
 
 # Starts project
 $ npm start
 
 # Optional: starts project with nodemon
-$ npm dev
+$ npm run dev
+```
+
+## Deploy in a docker container
+
+```sh
+# With docker-compose
+$ docker-compose up -d bookmarks
 ```
 
 ## Generate API documentation
@@ -54,7 +61,7 @@ $ npm run doc:serve
 # Stops running containers
 $ docker-compose down
 # Starts containers
-$ docker-compose up -d
+$ docker-compose up -d mongo
 ```
 
 ## TODO
